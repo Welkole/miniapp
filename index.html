@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои важные ссылки</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #333333;
+            color: #FFFFFF;
+            padding: 20px;
+            min-height: 100vh;
+            letter-spacing: -0.05em;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #FFFFFF;
+            font-family: 'Helvetica Neue Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            letter-spacing: -0.05em;
+        }
+        
+        .link-card {
+            background: #FED100;
+            color: #FFFFFF;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-family: 'Helvetica Neue Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            letter-spacing: -0.05em;
+        }
+        
+        .link-card:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(254, 209, 0, 0.3);
+        }
+        
+        .link-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #FFFFFF;
+        }
+        
+        .link-content {
+            flex: 1;
+        }
+        
+        .link-title {
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: #FFFFFF;
+            font-family: 'Helvetica Neue Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            letter-spacing: -0.05em;
+        }
+        
+        .link-description {
+            font-size: 14px;
+            opacity: 0.9;
+            color: #FFFFFF;
+            font-family: 'Helvetica Neue Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            letter-spacing: -0.05em;
+        }
+        
+        .arrow {
+            font-size: 16px;
+            opacity: 0.8;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📌 Важные ссылки</h1>
+        
+        <!-- ЗДЕСЬ ДОБАВЛЯЙТЕ СВОИ ССЫЛКИ -->
+        
+        <a href="https://google.com" class="link-card" target="_blank">
+            <div class="link-icon">🔍</div>
+            <div class="link-content">
+                <div class="link-title">Google</div>
+                <div class="link-description">Поиск в интернете</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+        
+        <a href="https://youtube.com" class="link-card" target="_blank">
+            <div class="link-icon">📺</div>
+            <div class="link-content">
+                <div class="link-title">YouTube</div>
+                <div class="link-description">Видеохостинг</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+        
+        <a href="https://github.com" class="link-card" target="_blank">
+            <div class="link-icon">💻</div>
+            <div class="link-content">
+                <div class="link-title">GitHub</div>
+                <div class="link-description">Платформа для разработчиков</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+        
+        <a href="https://stackoverflow.com" class="link-card" target="_blank">
+            <div class="link-icon">❓</div>
+            <div class="link-content">
+                <div class="link-title">Stack Overflow</div>
+                <div class="link-description">Вопросы и ответы по программированию</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+        
+        <!-- Добавьте больше ссылок по этому шаблону -->
+        
+    </div>
+
+    <script>
+        // Инициализация Telegram Web App
+        window.Telegram.WebApp.ready();
+        
+        // Настройка темы под Telegram
+        window.Telegram.WebApp.expand();
+        
+        // Уведомление о готовности
+        window.Telegram.WebApp.MainButton.setText("Готово");
+        window.Telegram.WebApp.MainButton.show();
+        window.Telegram.WebApp.MainButton.onClick(() => {
+            window.Telegram.WebApp.close();
+        });
+    </script>
+</body>
+</html>
